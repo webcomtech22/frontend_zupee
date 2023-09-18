@@ -1,0 +1,250 @@
+<div class="maindiv">
+    <div class="maindiv-content">
+            <div class="text-center">
+                <img class="img-fluid" [src]="path + bannerData.image">
+            </div>
+        
+            <div class="row whoWeAre" style="background-color: white;">
+                <div class="col-12 col-md-6 col1">
+                    <h2 class="color_blue text-center fw-bold">{{whoWeAreData.heading}}</h2>
+                    <div class="fs-6 mt-4">
+                        {{whoWeAreData.description}}
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col2">
+                    <img class="img-fluid " [src]="path + whoWeAreData.image">
+                </div>            
+        </div>
+    </div>
+
+    <div style="background-color: #f5f4f4;overflow-x: hidden;">
+        <div>
+            <h2 class="color_blue text-center fw-bold" style="margin-top: 60px;margin-bottom: 30px;">{{gameChangeData.heading}}</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-12" style="">
+                <div style="display: flex; justify-content: center;align-items: center;flex-wrap: wrap;">
+                    <img style="margin: 10px;" class="" height= "170" width="200" [src]="path + gameChangeData.image1">
+                    <img style="margin: 10px;" class="" height="170" width="200" [src]="path + gameChangeData.image2">
+                    <img style="margin: 10px;" class="" height="170" width="200" [src]="path + gameChangeData.image3">
+                    <img style="margin: 10px;" class="" height="170" width="200" [src]="path + gameChangeData.image4">
+                </div>
+                <!-- <div class="row g-3 gameChangeRow" style="">
+                    <div class="col-md-6 col-12" style="">
+                        <img class="" height="170" width="200" src="/assets/images/gameChanger-1.webp">
+                    </div>
+                    <div class="col-md-6 col-12 gameChangeCol" style="">
+                        <img class="" height="170" width="200" src="/assets/images/gameChanger-2.webp">
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <img class="" height="170" width="200" src="/assets/images/gameChanger-3.webp">
+                    </div>
+                    <div class="col-md-6 col-12 gameChangeCol" style="">
+                        <img class="" height="170" width="200" src="/assets/images/gameChanger-4.webp">
+                    </div>
+                </div> -->
+            </div>  
+
+            <div class="col-md-6 col-12 gameChange ">
+                <img class="gameChangeImage" style="" [src]="path + gameChangeData.image5">
+            </div>
+        </div>
+    </div>
+    
+    <div style="overflow-x: hidden;">
+        <div>
+            <h2 class="color_blue text-center pt-4 fw-bold">The Dream Team</h2>
+        </div>
+     
+            <div class="row g-5 k" style="">
+                <div class="col-12 col-md-4 " *ngFor="let obj of dreamTeamData" style="">
+                    <div class="card" style="">
+                        <img  [src]="path + obj.image" class="card-img-top" style="height: 250px;width: auto;" alt="...">
+                        <div class="card-body " style="">
+                          <h5 class="card-title color_blue text-center">{{obj.name}}</h5>
+                          <p class="card-text text-center"><small class="color_blue ">{{obj.post}}</small></p>
+                          <p class="card-text dreamDesc">{{obj.description}}</p>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+
+        </div>
+
+
+        <div style="overflow-x: hidden;">
+            <div class="pt-5">
+                <h2 class="color_blue text-center pt-4 fw-bold">Zupee in Action</h2>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6" *ngFor="let obj of videoData">
+                    <iframe class="elementor-video video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Saara India Khelega Zupee | Snakes and Ladders" width="640" height="360" [src]="sanitizeVideoUrl(obj.video)" id="widget2" data-gtm-yt-inspected-9="true"></iframe>
+                    <!-- <video width="640" height="360" [src]="sanitizeVideoUrl(obj.video)"></video> -->
+                </div>
+            </div>
+        </div>
+                <!--
+                    <a class="ytp-title-link yt-uix-sessionlink" target="_blank" data-sessionlink="feature=player-title" tabindex="0" href="https://www.youtube.com/watch?v=MXFG-wM_Eu4&amp;ebc=ANyPxKrHpr0pK2_W22kgy1IM6S6VKqjLVSTbRwipXSZRLAUb99hiaYvW9PPKRadyNOmxUBs64b2jks6tfVYygEqUWL2_bEwEtQ">Saara India Khelega Zupee | Snakes and Ladders</a>
+
+                <div class="col-12 col-md-6">
+                    <iframe  class="elementor-video video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Saara India Khelega Zupee | Ludo" width="640" height="360" src="https://www.youtube.com/embed/MXFG-wM_Eu4?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.zupee.com&amp;widgetid=1" id="widget4" data-gtm-yt-inspected-9="true"></iframe>
+                </div>
+                 <div class="col-12 col-md-6">
+                    <iframe  class="elementor-video video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Saara India Khelega Zupee | Ludo" width="640" height="360" src="https://www.youtube.com/embed/rB94oyF-3jo?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.zupee.com&amp;widgetid=3" id="widget4" data-gtm-yt-inspected-9="true"></iframe>
+                </div>
+                <div class="col-12 col-md-6">
+                    <iframe class="elementor-video video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="10 Minute Mein Game Ho Jayega | Salman Khan X Zupee" width="640" height="360" src="https://www.youtube.com/embed/C7HITruJKNk?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.zupee.com&amp;widgetid=5" id="widget6" data-gtm-yt-inspected-9="true"></iframe>                
+                </div> -->
+            
+
+
+        <div>
+            <div class="py-5">
+                <h2 class="color_blue text-center py-4 fw-bold">{{investJourneyData.heading}}</h2>
+                <img class="img-fluid" [src]="path + investJourneyData.image">
+            </div>            
+        </div>
+
+
+        <div style="overflow-x:hidden">
+            <div class="">
+                <h2 class="color_blue text-center pt-4 fw-bold">{{ourValuesData.heading}}</h2>
+            </div>
+            <div class="row valueRow" style=" display: flex;flex-wrap: wrap;padding: 0 0px;"> 
+                <div class="column" style="">
+                  <img style="width: 100%;" [src]="path + ourValuesData.image1">
+                  </div>
+                  <div class="column1" style="">
+                    <img style="width: 100%;"  [src]="path + ourValuesData.image2">
+                  </div>
+                  <div class="column2" style="">
+                    <img  style="width: 100%;height: 94%;" [src]="path + ourValuesData.image3">
+                  </div>
+                  <div class="column1" style="">
+                    <img style="width: 100%;margin-top: -10px;" [src]="path + ourValuesData.image4">
+                  </div>
+                  <div class="column2 " style="">
+                    <img class="bigImg" style="" [src]="path + ourValuesData.image5">
+                  </div>
+                  <div class="column1 mTop" style="">
+                    <img class="mTopImg" [src]="path + ourValuesData.image6" style="">
+                  </div>
+                </div>
+            <!-- <div class="">
+                <h2 class="color_blue text-center pt-4 fw-bold">OUR VALUES</h2>
+            </div>
+            <div class="row valueImgRow1"  style="">
+                <div class="col-12">
+                    <img class="img-fluid" src="/assets/images/ourValue-1.webp">
+                </div>
+            </div>
+            <div class="row valueImgRow2"  style="">
+                <div class="col-md-6 col-12 ">
+                    <img class="valueImage"   src="/assets/images/ourValue-2.webp">
+                </div>
+                <div class="col-md-6 col-12">
+                    <img class="valueImage2"  style=""  src="/assets/images/ourValue-3.webp">
+                </div>
+            </div>
+            <div class="row valueImgRow3" style="">
+                <div class="col-md-6 col-12  valueImgCol1" style="">
+                    <div class="row g-4">
+                        <div class="col-12 ">
+                            <img class="valueImage"  src="/assets/images/ourValue-4.webp">
+                        </div>
+                        <div class="col-12">
+                            <img class="valueImage"  style="" src="/assets/images/ourValue-6.webp">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12  valueImgCol3">
+                    <img class="valueImage3" style="" src="/assets/images/ourValue-5.webp">
+                </div>
+            </div>
+         -->
+
+
+        <div>
+            <div>
+                <h2 class="color_blue text-center py-4 fw-bold">INVESTORS</h2>
+            </div>
+            <div>
+                <img class="img-fluid" [src]="path + investorsData.image">
+            </div>
+        </div>
+
+
+        <div class="" style="overflow-x: hidden; background: #4611a7;border: 1px solid #e1e6f5;">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="footer_title">Zupee</div>
+                    <p>
+                        <a class="f-link" href="#">About Us</a><br>
+                        <a class="f-link" href="#">RNG Certification</a><br>
+                        <a class="f-link" href="#">AIGF Skill Certificate</a><br>
+                        <a class="f-link" href="#">Privacy Policy</a><br>
+                        <a class="f-link" href="#">Privacy Policy – Zupee Free</a><br>
+                        <a class="f-link" href="#">Terms & Conditions</a><br>
+                        <a class="f-link" href="#">Terms and Conditions – Zupee Free</a><br>
+                        <a class="f-link" href="#">Responsible Gaming</a><br>
+                        <a class="f-link" href="#">Blog</a><br>
+                        <a class="f-link" href="#">Careers</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div>
+                        <div class="footer_title">Our Games</div>
+                        <p>
+                            <a class="f-link" href="#">Ludo</a><br>
+                            <a class="f-link" href="#">Snakes and ladders Plus</a><br>
+                            <a class="f-link" href="#">Trump Cards Mania</a><br>
+                            <a class="f-link" href="#">Zupee Cricket X Tambola</a><br>
+                            <a class="f-link" href="#">Zupee Cricket Cards</a>
+                        </p>
+                    </div>
+                   
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="footer_title">Popular Posts</div>
+                    <p>
+                        <a class="f-link" href="#">Download ludo online cash games (iOS | Android)</a><br>
+                        <a class="f-link" href="#">Best money earning apps in India</a><br>
+                        <a class="f-link" href="#">How to Win Ludo Money online</a><br>
+                        <a class="f-link" href="#">Ludo earning app to win cash</a><br>
+                        <a class="f-link" href="#">Play games to win money online</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                    <div class="footer_title">Payment Partners</div>
+                    <p><img class="payment-icon lazyLoaded" src="/assets/images/razorpay.png"></p>
+                    <p><img class="payment-icon lazyLoaded" src="/assets/images/juspay.png"></p>
+                    <p><img class="payment-icon lazyLoaded" src="/assets/images/cashfree.png"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="footerCustom">
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="">
+                            <a href="#"><img class="footer-logo" [src]="path + footerData.logoImage"></a>
+                        </div>
+                        <div>
+                            <ul>
+                                <li><a href="https://www.facebook.com/zupeegames"><img class="linkImage" [src]="path + footerData.facebook"></a></li>
+                                <li><a href="https://www.facebook.com/zupee_official"><img class="linkImage" [src]="path + footerData.instagram"></a></li>
+                                <li><a href="https://www.facebook.com/c/zupeeofficial"><img class="linkImage" [src]="path + footerData.youtube"></a></li>
+                                <li><a href="mailto:care@zupee.com"><img class="linkImage" [src]="path + footerData.messanger"></a></li>
+                            </ul>
+                        </div>
+                        <p class="copyright-text">{{footerData.lastText}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div>
+        
+        
+    
+        
+   

@@ -1,0 +1,447 @@
+.color_blue{
+  color: #4611a7 !important;
+}
+.fonts{
+
+}
+
+.maindiv{
+    position: absolute;
+  left: 0;
+  /* width: 100%; */
+    margin-top: 60px;
+    background-color: #ffe800 ;
+
+}
+h1{
+    display: block;
+    color: #4611a7 !important;
+    font-family: SignPainter HouseSlant !important;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.rowdiv{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.bannerImage{
+    height:500px;
+    width:550px;
+}
+.row1col1{
+    margin-top: 120px;
+}
+.col1div{
+    margin-left: 60px;
+}
+.col2div{
+    margin-left: -60px;
+}
+.row1col2{
+    margin-top: 30px;
+}
+@media(max-width:768px) {
+    h1{
+        font-size: 35px !important;
+        margin-left: -20px;
+    }
+    .maindiv p{
+        font-weight: 600;
+        font-size: 17px;
+        margin-left: -20px;
+    }
+    div.col2div{
+        margin-left:-30px;
+    }
+    div.col1div{
+        margin-left: 0px;
+        text-align: center;
+    }
+    div.rowdiv{
+        display: block;
+    }
+    img.bannerImage{
+        width: 100%;
+        height: 90%;
+    }
+    div.row1col1{
+        margin-top: 20px;
+    }
+    div.row1col2{
+        margin-top: 0px;
+    }
+}
+.hero-section-download-btn {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+    width: 350px;
+    height: 50px;
+    border-radius: 57.9528px;
+    background-color: #4611a7;
+}
+
+.hero-section-download-btn, .downloadbtn {
+    position: relative;
+    overflow: hidden;
+}
+
+/* our games */
+
+
+.our-games{
+    font-size: 2.30vw;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.793em;
+    padding: 30px 0 0 0;
+    margin-top: 30px;
+}
+.our-games2{
+
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    font-size:15px;
+    margin-left: 210px;
+    margin-right: 210px; 
+    color: #000;
+
+}
+.ludo-supreme{
+    height: 100px;
+    width: 100px;
+}
+.games{
+    margin-left: 80px;
+}
+.gameName{
+  white-space: nowrap; 
+  font-size: 14px;
+  color:#4611a7;
+  text-align: center;
+  /* background-color: aqua; */
+}
+  /* div.ourGamesdiv{
+      margin-bottom : 160px;
+    } */
+.ourGames{
+  margin-left: 80px;
+}
+@media(max-width:768px){
+
+    div.ourGames{
+      margin-left: 15px;
+    }
+
+    /* div.ourGamesdiv{
+      margin-top: 0px;
+    } */
+    div.our-games{
+        /* margin-top: 0px; */
+        font-size: 16px;
+        margin-top: 50px;
+    }
+    div.our-games2{
+        font-size: 12px;
+        margin-left: 30px;
+        margin-right: 30px; 
+        margin-top: 20px;
+    }
+    img.ludo-supreme{
+        height: 80px;
+        width: 80px; 
+    }
+    div.gameName{
+        font-size: 13px;
+        color:#4611a7;
+        margin-left: 50px;
+        text-align: center;   
+    }   
+}
+  
+  /* play with Money */
+
+  .moneyImage{
+    height: 130px;
+    width: 130px;
+    margin-right: -30px;
+  }
+  .reviewImage{
+    height: 120px;
+    width:400px;
+    margin-left: 350px;
+    margin-right: 300px;
+    margin-top: 20px;
+  }
+  .reviewDiv{
+    width: 100%;
+    left: 0px;
+     position: absolute;
+     margin-top: 1350px;
+  }
+  .playWithMoney{
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color:#4611a7;
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  /* div.moneyRow{
+    margin-left: 80px;
+  } */
+  @media (max-width: 768px) {
+    div.moneyRow{
+      margin-left: 5px;
+
+    }
+    img.moneyImage{
+      height: 100px;
+      width: 100px;
+    }
+    .playMoney{
+        margin-left: -70px;
+    }
+    .reviewDiv{
+        margin-top: 1690px;
+        
+    }
+    .reviewImage{
+        height: 100px;
+        width:300px;
+        margin-left: 37px;
+        margin-right: 0px;
+      }
+      
+  }
+
+/* video Part */
+  .elementor-video{
+        height: 250px;
+        width: 250px;
+        margin-left: 400px;
+  }
+  .videoPart{
+    
+  }
+  
+  @media (max-width: 768px) {
+   
+    video.elementor-video{
+    margin-left: 0px;
+    width: 100%;
+    }
+  }
+
+ 
+/* review Cards */
+
+  
+  /* zupee is member of */
+  .zupeeM{
+    width: 100%;left: 0px;
+    position: absolute;
+    margin-top: 2510px;
+  }
+  .zupeeMember{
+    margin-bottom: 20px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color:#4611a7;
+    font-size: 20px;
+  }
+  .zupeeMember2{
+    margin-left: 100px;
+    font-size: 14px;
+  }
+  .last2div{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .memberImage{
+    height: 100px;
+    width: 150px;
+  }
+
+.m{
+  width: 900px;
+  padding-left: 115px;    
+  /* background-color: aqua; */
+}
+@media (max-width: 768px) {
+    div.m{
+        width: 100%;
+        margin-left: 0px;
+        padding-left: 0px;
+        /* background-color: aqua; */
+    }
+    img.memberImage{
+        height: 100px;
+        width: 100%;
+    }
+    div.zupeeM{
+        margin-top: 2890px;
+    }
+    p.zupeeMember{
+        font-size: 17px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .zupeeMember2{
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 14px;
+        text-align: center;
+      }
+}
+
+  /* question answer */
+  .questions{
+    border: 1px solid #ddd;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .toggle-arrow {
+    font-size: 20px;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease-in-out;
+  }
+  .opened {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  .question{
+    border-bottom: 1px solid #8b8686;
+  }
+  .answer{
+    font-size: 15px;
+  }
+  @media (max-width: 768px) {
+    div.que-ans{
+        margin-top: 3290px;
+    }
+    div.answer{
+      font-size: 10px;
+    }
+  }
+
+  /* footer section */
+  .footerPart{
+    width: 100%;
+    left: 0px;
+    position: absolute;
+    /* margin-top: 3190px; */
+    background: #4611a7;
+    border: 1px solid #e1e6f5;
+  }
+  .footer_title{
+    font-family: 'Inter',sans-serif !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    padding-bottom: 10px;
+    color: white;
+  }
+  .f-link{
+    line-height: 2.2em;
+    opacity: .68;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+  }
+  .payment-icon {
+    opacity: .66;
+    padding-bottom: 10px;
+  }
+  .lazyLoaded {
+    max-width: 130px;
+    height: auto;
+    vertical-align: middle;
+}
+.col-md-3, .col-xs-6, .col-sm-6{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    /* background-color:aqua; */
+}
+
+.footerCustom{
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.footer-logo{
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 25px;
+}
+ul li{
+    display: inline;
+    list-style: none;
+}
+ul{
+    margin-right: 30px;
+}
+.linkImage{
+    max-width: 30px;
+    height: auto;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+.copyright-text{
+    font-size: 13px;
+    color: white;
+    margin: 12px 0 0;
+    opacity: .66;
+    margin-bottom: 30px;
+}
+.row{
+    margin-right: 10px;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+@media (max-width: 768px){
+    div.footerPart{
+        /* margin-top: 3690px; */
+    }
+}
+
+@media (max-width: 767px) {
+  div.footerCustom {
+      /* display: flex;
+      flex-direction: column; */
+      margin-bottom: 80px;
+  }
+
+  .footerCustom > .col-md-12,
+  .footerCustom > div {
+      order: -1; /* Move .footerCustom section to the top in mobile view */
+  }
+
+  div.footer-social-links {
+      order: 2; /* Move social media links below footer-logo in mobile view */
+  }
+
+  div.payment-partners {
+      order: 3; /* Move payment partners below social media links in mobile view */
+  }
+}

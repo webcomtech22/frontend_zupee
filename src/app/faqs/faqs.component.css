@@ -1,0 +1,127 @@
+.color_blue{
+    color: #4611a7;
+}
+.fonts{
+   
+}
+.maindiv{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    margin-top: 69px;
+    height: 100%;
+    /* background-color: #ffe800; */
+}
+
+.accordion{
+  padding: 0 60px;
+}
+@media(max-width:768px){
+  .accordion{
+    padding: 0 0px;
+  }
+}
+
+  .footerPart{
+    width: 100%;
+    left: 0px;
+    position: absolute;
+    /* margin-top: 3190px; */
+    background: #4611a7;
+    border: 1px solid #e1e6f5;
+  }
+  .footer_title{
+    font-family: 'Inter',sans-serif !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    padding-bottom: 10px;
+    color: white;
+  }
+  .f-link{
+    line-height: 2.2em;
+    opacity: .68;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+  }
+  .payment-icon {
+    opacity: .66;
+    padding-bottom: 10px;
+  }
+  .lazyLoaded {
+    max-width: 130px;
+    height: auto;
+    vertical-align: middle;
+}
+.col-md-3, .col-xs-6, .col-sm-6{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    /* background-color:aqua; */
+}
+
+.footerCustom{
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.footer-logo{
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 25px;
+}
+ul li{
+    display: inline;
+    list-style: none;
+}
+ul{
+    margin-right: 30px;
+}
+.linkImage{
+    max-width: 30px;
+    height: auto;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+.copyright-text{
+    font-size: 13px;
+    color: white;
+    margin: 12px 0 0;
+    opacity: .66;
+    margin-bottom: 30px;
+}
+.row{
+    margin-right: 10px;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+@media (max-width: 768px){
+    div.footerPart{
+        /* margin-top: 3690px; */
+    }
+}
+
+@media (max-width: 767px) {
+  div.footerCustom {
+      /* display: flex;
+      flex-direction: column; */
+      margin-bottom: 80px;
+  }
+
+  .footerCustom > .col-md-12,
+  .footerCustom > div {
+      order: -1; /* Move .footerCustom section to the top in mobile view */
+  }
+
+  div.footer-social-links {
+      order: 2; /* Move social media links below footer-logo in mobile view */
+  }
+
+  div.payment-partners {
+      order: 3; /* Move payment partners below social media links in mobile view */
+  }
+}

@@ -1,0 +1,16 @@
+.hero-section-download-btn {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    margin-top: 20px;
+    padding: 0;
+    width: 350px;
+    height: 60px;
+    border-radius: 57.9528px;
+    background-color: #4611a7;
+}
+
+.hero-section-download-btn, .downloadbtn {
+    position: relative;
+    overflow: hidden;
+}

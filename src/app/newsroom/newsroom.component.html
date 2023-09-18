@@ -1,0 +1,154 @@
+<div class="maindiv">
+    <div class="mt-4">
+        <img class="img-fluid" src="/assets/images/news_bannerImage.png">
+    </div>
+
+    <div class="d-md-flex d-block" style="overflow-x: hidden;padding: 0 20px;">
+        <div class="d-flex all" style="">
+            <button class="btn ms-2" style="background:#ffe800;padding:7px 40px;">ALL</button>
+            <button class="btn ms-2" style="border: 1px solid #4611a7;">ZUPEE IN NEWS</button>
+            <button class="btn ms-2" style="border: 1px solid #4611a7;">PRESS RELEASE</button>
+        </div>
+        
+        <div style="" class="d-flex all2">
+            <div class="dropdown show">
+                <a style="border: 1px solid rgb(202, 198, 198);" class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown link
+                </a>
+              
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            
+            <!-- <div class="dropdown show">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Content-Type
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a> -->
+
+                <!-- <option>Announcement</option>
+                <option selected>Ashwani Rana</option>
+                <option>Brand Ambassador</option>
+                <option>COO</option>
+                <option>Funding round</option>
+                <option>G20 DIA Mega Summit</option>
+                <option>Independence Day</option>
+                <option>India Ka Apna Game</option>
+                <option>International Women's Day</option>
+                <option>Jyoti Gupta</option>
+                <option>Jyoti Media Interview</option>
+                <option>Kapil Sharma</option>
+                <option>kjaf</option>
+                <option>Listicle</option>
+                <option>Media Interview</option>
+                <option>National Technology Day</option>
+                <option>Period Leave</option>
+                <option>Period Leave Policy</option>
+                <option>Reliance Jio</option> -->
+            <!-- </div>
+            </div> -->
+            <div style="display: flex;">
+                <input type="search" class="form-control search-input ms-2 w-50" placeholder="Search">
+            <!-- <span class="input-group-text"><i class="fas fa-search"></i> </span> -->
+                <button class="btn color-blue" style="border: 1px solid #4611a7;margin-left: 5px;" >Go</button>
+            </div>
+            
+        </div>
+
+    </div>
+    
+
+    <div>
+        <div class="row newsData" style="" >
+            <div class="col-md-4 col-12 mt-3" style=""  *ngFor="let obj of newsData">
+                <div class="card" style="border: none;">
+                    <img [src]="obj.image" class="card-img-top newsImage" style="">
+                    <div class="card-body">
+                        <h6 class="card-title color_blue">{{obj.heading}}</h6>
+                        <div><span style="font-size: 12px;">{{obj.date}}</span><span style="font-size: 12px;margin-left: 10px">{{obj.news}}</span><span style="font-size: 12px;margin-left: 10px" class="post">{{obj.post}}</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="text-center">
+        <hr style="margin: 0 60px;">
+        <p class="text-center fs-3 fw-bold">For any PR/Media queries, please contact:</p>
+        <p class="color_blue"><i class="fas fa-envelope"></i>pr@zupee.in</p>
+    </div>
+
+    <!-- footer custom -->
+    <div class="" style="background: #4611a7;border: 1px solid #e1e6f5;">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <div class="footer_title">Zupee</div>
+                <p>
+                    <a class="f-link" href="#">About Us</a><br>
+                    <a class="f-link" href="#">RNG Certification</a><br>
+                    <a class="f-link" href="#">AIGF Skill Certificate</a><br>
+                    <a class="f-link" href="#">Privacy Policy</a><br>
+                    <a class="f-link" href="#">Privacy Policy – Zupee Free</a><br>
+                    <a class="f-link" href="#">Terms & Conditions</a><br>
+                    <a class="f-link" href="#">Terms and Conditions – Zupee Free</a><br>
+                    <a class="f-link" href="#">Responsible Gaming</a><br>
+                    <a class="f-link" href="#">Blog</a><br>
+                    <a class="f-link" href="#">Careers</a>
+                </p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <div>
+                    <div class="footer_title">Our Games</div>
+                    <p>
+                        <a class="f-link" href="#">Ludo</a><br>
+                        <a class="f-link" href="#">Snakes and ladders Plus</a><br>
+                        <a class="f-link" href="#">Trump Cards Mania</a><br>
+                        <a class="f-link" href="#">Zupee Cricket X Tambola</a><br>
+                        <a class="f-link" href="#">Zupee Cricket Cards</a>
+                    </p>
+                </div>
+               
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <div class="footer_title">Popular Posts</div>
+                <p>
+                    <a class="f-link" href="#">Download ludo online cash games (iOS | Android)</a><br>
+                    <a class="f-link" href="#">Best money earning apps in India</a><br>
+                    <a class="f-link" href="#">How to Win Ludo Money online</a><br>
+                    <a class="f-link" href="#">Ludo earning app to win cash</a><br>
+                    <a class="f-link" href="#">Play games to win money online</a>
+                </p>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <div class="footer_title">Payment Partners</div>
+                <p><img class="payment-icon lazyLoaded" src="/assets/images/razorpay.png"></p>
+                <p><img class="payment-icon lazyLoaded" src="/assets/images/juspay.png"></p>
+                <p><img class="payment-icon lazyLoaded" src="/assets/images/cashfree.png"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="footerCustom">
+                    <div class="col-md-12 col-sm-12 col-xs-12" style="">
+                        <a href="#"><img class="footer-logo" [src]="path + footerCustomData.logoImage" ></a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href="https://www.facebook.com/zupeegames"><img class="linkImage" [src]="path + footerCustomData.facebook"></a></li>
+                            <li><a href="https://www.facebook.com/zupee_official"><img class="linkImage" [src]="path + footerCustomData.instagram"></a></li>
+                            <li><a href="https://www.facebook.com/c/zupeeofficial"><img class="linkImage" [src]="path + footerCustomData.youtube"></a></li>
+                            <li><a href="mailto:care@zupee.com"><img class="linkImage" [src]="path + footerCustomData.messanger"></a></li>
+                        </ul>
+                    </div>
+                    <p class="copyright-text">{{footerCustomData.lastText}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

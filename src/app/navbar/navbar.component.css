@@ -1,0 +1,39 @@
+a{
+    font-family: 'Inter',sans-serif !important;
+    font-weight: 600;
+    padding: 0;
+    text-transform: uppercase;
+    line-height: 40px;
+    letter-spacing: 1px;
+    color: #4611a7;
+    font-size: 13px;
+    margin: 0 5px 0 5px;
+    /* background-color: #ffe800; */
+}
+.menu-toggle.full {
+    border: 2px solid;
+    font-size: 20px;
+    height: 40px;
+    letter-spacing: 2px;
+    line-height: 1;
+    padding-top: 8px;
+    position: relative;
+    right: 15px;
+    text-align: center;
+    top: 10px;
+    -webkit-transition: all .3s ease 0s;
+    transition: all .3s ease 0s;
+    width: 50px;
+    z-index: 9999;
+}
+@media (max-width: 768px){
+    .menu-toggle.full, .navbar-header h3 a {
+    color: #4611a7 !important;
+}}
+@media only screen and (max-width: 767px){
+.menu-toggle.full {
+    border: 0;
+}}
+.games a{
+    background-color:#ffe800;
+}

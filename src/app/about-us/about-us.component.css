@@ -1,0 +1,332 @@
+.color_blue{
+    color: #4611a7;
+}
+.fonts{
+   
+}
+.maindiv{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    margin-top: 69px;
+    height: 100%;
+    /* background-color: #ffe800; */
+}
+.maindiv-content {
+    overflow-x: hidden;
+}
+ 
+.col1{
+    padding: 60px 0px 60px 100px;
+}  
+.col2{
+    padding: 60px 100px 60px 0px;
+}  
+
+@media(max-width:768px) {
+  
+        .col1{
+        padding: 60px 0px 0px 0px;
+        }    
+        .col2{
+            padding: 20px 0px 60px 20px;
+       }
+   
+}
+
+
+/* gameChange */
+.gameChangeCol{
+    padding-left: 40px;
+}
+
+.gameChangeRow{
+    padding-left: 60px;
+}
+.gameChangeImage{
+    height:300px;
+    width:400px;
+}
+.gameChange{
+    margin-top: 0px;
+    /* background-color: aqua; */
+}
+@media(max-width:768px){
+    div.gameChange{
+        margin-top: 0px;
+        /* padding-left: 20px; */
+        /* margin-left: -20px; */
+        /* text-align: center; */
+        text-align: center;
+    }
+    img.gameChangeImage{
+                margin-left: -80px;
+                padding-left: 80px;
+    }
+    div.gameChangeCol{
+        padding-left: 5px;
+        
+    }
+    div.gameChangeRow{
+        padding-left: 0px;
+        
+    }
+}
+    
+/* video */
+
+.video{
+    height: 200px;
+    width: 400px;
+}
+@media(max-width:768px){
+    iframe.video{
+        height: auto;
+        width: 100%;
+        margin-left: -10px;
+    }
+}
+
+
+/* dreamTeam */
+.k{
+    padding-left: 50px;padding-right: 80px;
+}
+.dreamDesc{
+    font-size: 12px;
+}
+.card{
+    border: none;
+}
+@media(max-width:768px){
+    .k{
+        padding-left: 0px;padding-right: 0px;
+    }
+    .card{
+        margin-left: -30px;
+    }
+}
+/* ourValues */
+ .valueImgRow1{
+    padding: 0 100px 0 100px;
+}
+
+.valueImgRow2{
+    padding: 0 100px 0 100px;margin-top: 20px;
+}
+
+.valueImgRow3{
+    padding: 0px 100px 0 50px;
+} 
+ .valueImage{
+    height:260px;
+    width:300px;
+}
+
+.valueImage2{
+    height:260px;
+    width:485px;
+    margin-left: -92px;
+}
+
+.valueImage3{
+    height:544px; width:485px;
+    margin-left: -66px;margin-top: -7px;
+} 
+.valueImgCol1{
+    margin-top: -60px;
+}
+@media(max-width:768px){
+ 
+    .valueImgRow1{
+        padding: 0 0px 0 0px;
+    }
+    
+    .valueImgRow2{
+        padding: 0 0px 0 0px;margin-top: 0px;
+    }
+    
+    .valueImgRow3{
+        padding: 0px 0px 0 0px;
+    } 
+     .valueImage{
+        height:auto;
+        width:100%;
+        text-align: center;
+    }
+    
+    .valueImage2{
+        height:auto;
+        width:100%;
+        margin-left: 0px;
+        text-align: center;
+    }
+    
+    .valueImage3{
+        height:auto; width:100%;
+        margin-left: 0px;margin-top: 0px;
+        text-align: center;
+    } 
+    .valueImgCol1{
+        margin-top: 0px;
+    }
+}
+
+
+/* footer section */
+.footerPart{
+    width: 100%;
+    left: 0px;
+    position: absolute;
+    /* margin-top: 3190px; */
+    background: #4611a7;
+    border: 1px solid #e1e6f5;
+  }
+  .footer_title{
+    font-family: 'Inter',sans-serif !important;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 29px;
+    padding-bottom: 10px;
+    color: white;
+  }
+  .f-link{
+    line-height: 2.2em;
+    opacity: .68;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+  }
+  .payment-icon {
+    opacity: .66;
+    padding-bottom: 10px;
+  }
+  .lazyLoaded {
+    max-width: 130px;
+    height: auto;
+    vertical-align: middle;
+}
+.col-md-3, .col-xs-6, .col-sm-6{
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    /* background-color:aqua; */
+}
+
+.footerCustom{
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.footer-logo{
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 25px;
+}
+ul li{
+    display: inline;
+    list-style: none;
+}
+ul{
+    margin-right: 30px;
+}
+.linkImage{
+    max-width: 30px;
+    height: auto;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+.copyright-text{
+    font-size: 13px;
+    color: white;
+    margin: 12px 0 0;
+    opacity: .66;
+    margin-bottom: 30px;
+}
+.row{
+    margin-right: 10px;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+@media (max-width: 768px){
+    div.footerPart{
+        /* margin-top: 3690px; */
+    }
+}
+
+@media (max-width: 767px) {
+  div.footerCustom {
+      /* display: flex;
+      flex-direction: column; */
+      margin-bottom: 80px;
+  }
+
+  .footerCustom > .col-md-12,
+  .footerCustom > div {
+      order: -1; /* Move .footerCustom section to the top in mobile view */
+  }
+
+  div.footer-social-links {
+      order: 2; /* Move social media links below footer-logo in mobile view */
+  }
+
+  div.payment-partners {
+      order: 3; /* Move payment partners below social media links in mobile view */
+  }
+}
+
+.column{
+    flex: 100%;max-width: 100%;padding: 0 50px;margin: 10px;
+}
+.column1 {
+    flex:25%;max-width: 40%;padding: 0 0 0 50px;margin: 10px;
+  }
+  .column2{
+    flex:75%;max-width: 60%;padding: 0 50px 0 0px;margin: 10px;
+  }
+  .mTop{
+    margin-top: -245px;
+  }
+  .bigImg{
+    width: 100%;height: 100%;margin-top: -10px;
+  }
+  .mTopImg{
+    width:89%;height: 96%;
+  }
+  @media (max-width: 600px) {
+    .valueRow{
+        margin: 0 20px;
+    }
+    .column{
+        flex: 100%;max-width: 100%;padding: 0 0px;margin: 5px 0;
+    }
+    .column1 {
+      flex: 100%;
+      max-width: 100%;
+      padding: 0 0 0 0px;
+      margin: 5px 0;
+        }
+    .column2{
+        flex: 100%;
+        max-width: 100%;
+        padding: 0 0px 0 0px;
+        margin: 5px 0;
+      }
+      .mTop{
+        margin: 5px 0;
+    }
+    .mTopImg{
+        width: 100%;
+    }
+    .bigImg{
+        margin-top: 0;
+    }
+  }
+  /* .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  } */
+  

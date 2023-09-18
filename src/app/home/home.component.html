@@ -1,0 +1,271 @@
+<div class="maindiv">
+    <div class="row rowdiv" >
+        <div class="col-md-6 col-12 row1col1">
+            <div class="col1div">
+                <h1>{{bannerData.heading}}</h1>
+                <p>{{bannerData.description}}</p>
+                <div class="elementor-widget-container d-md-flex d-none">
+                    <div class="hero-section-download-btn" onclick="handleclick(event)">
+                    <a class="desktop-download-a" style="color: white;text-decoration: no;" href="https://apk.zupee.com/zupee/329/install-zupee.apk">
+                        <img decoding="async" class="desktop-androidimg ls-is-cached lazyloaded" src="https://static-perf1.zupee.com/wp-content/uploads/2023/06/android-icon-001.gif" data-src="https://static-perf1.zupee.com/wp-content/uploads/2023/06/android-icon-001.gif" alt="download apk now" width="29px" height="33px">Download App</a>
+                    </div>
+                    </div>
+                <div class="d-md-flex d-none mt-4 text">
+                    <img src="/assets/images/download.webp" height="18" class="mx-2">
+                    <span class="color_blue fw-bold" style="font-size: 14px;">2Cr+ Downloads </span>
+                    <img src="/assets/images/crown.webp" height="18" class="mx-2">
+                    <span class="color_blue fw-bold" style="font-size: 14px;">₹10 Cr+ Daily cash winnings</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-12 row1col2">
+            <div class="col2div">
+                <img class="bannerImage" [src]="path + bannerData.bannerImage">
+            </div>
+        </div>
+    </div>
+
+
+
+     <div class="" style="background-color: white;">
+        
+        <div class="our-games color_blue">SKILL-BASED GAMES ON ZUPEE MONEY GAME APP</div>
+        <div class="our-games2">Download and win money with these 8<a class="" href="https://www.zupee.com/blog/online-gaming-for-money/" style="text-decoration: none;color: #4611a7;">Online Cash Games</a>:</div>
+        
+    
+        <div class="ourGames" >
+            <div class="row ourGamesdiv" >
+                <div class="col-6 col-md-3  mb-4" *ngFor="let obj of ourGamesData">
+                    <img class="ludo-supreme" [src]="path + obj.gameImage">
+                    <div style="margin-left: -112px;margin-top: 10px;"><div class="gameName">{{obj.name}}</div></div>
+                </div>
+            </div>
+        </div>  
+    </div>
+
+
+    <!-- money Games -->
+
+    <div class="" style="background-color: #ffe800;margin-top: -30px;">
+        <div class="our-games color_blue">why play money winning games on Zupee?</div>
+            <div class="">
+                <div class="row moneyRow">
+                    <div class="col-md-2 col-4" *ngFor="let obj of moneyGamesData">
+                        <img class="moneyImage" [src]="path + obj.moneyImage">
+                    </div>
+                </div> 
+            </div>
+    </div>
+    
+     
+    <div class="" style="background-color: white;" >
+        <div style="margin-top: 20px;">
+            <div class="our-games color_blue mt-5">{{ratingImageData.heading}}</div>
+            <div class="our-games2">{{ratingImageData.description}}</div>
+            <div class="" style="">
+                <img class="reviewImage" [src]="path + ratingImageData.image">
+            </div>
+        </div>
+
+
+         
+        <div class="" style=""> 
+            <div id="carouselExampleControls" class="carousel slide mt-4 d-none d-md-flex">
+                <div class="carousel-inner">
+                  <div class="carousel-item" style="margin-left: 20px;" *ngFor="let review of getReviewGroups(); let i = index"[class.active]="i===0">
+                    <div class="row">
+                        <div class="col" *ngFor="let obj of review">
+                            <div class="card" style="width: 16rem;height: 20rem; background: #ffe800;"> 
+                                <div style="display: flex;">
+                                    <img [src]="path + obj.image" class="" style="height: 70px;width: 70px;border-radius: 50%;margin-left: 20px;" alt="...">
+                                    <p class="mt-4 ms-2 color_blue fw-bold">{{obj.name}}</p>
+                                </div>
+                                
+                                <div class="card-body" style="background: white;margin:5px;font-size:13px;line-height: 20px;">
+                                  <div class="card-text">{{obj.description}}</div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
+        
+        <div id="carouselExampleControls2" class="carousel slide mt-4 d-md-none d-flex">
+            <div class="carousel-inner">
+               <div class="carousel-item" *ngFor="let review of getReviewGroups2(); let i = index"[class.active]="i===0">
+                        <div class="row" style="margin-left: 50px;">
+                            <div class="col" *ngFor="let obj of review">
+                                <div class="card" style="width: 16rem;height: 20rem; background: #ffe800;">
+                                    <div style="display: flex;">
+                                        <img [src]="path + obj.image" class="" style="height: 70px;width: 70px;border-radius: 50%;margin-left: 20px;" alt="...">
+                                        <p class="mt-4 ms-2 color_blue fw-bold">{{obj.name}}</p>
+                                    </div>
+                                    <div class="card-body" style="background: white;margin:5px;font-size:13px;line-height: 20px;">
+                                      <div class="card-text">{{obj.description}}</div>
+                                    </div>
+                                  </div>
+                            </div>
+                        </div> 
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls2" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div></div></div>
+
+         
+
+        <div class="" style="background-color: #ffe800;">
+            <div class="our-games color_blue">{{videoData.heading}}</div>
+            <div class="our-games2 mt-2">Learn how to download the Zupee gaming app:</div>
+            <div class="mt-4">
+                <video class="elementor-video" [src]="videoData.video" controls="" preload="metadata" controlslist="nodownload" poster="https://static-perf1.zupee.com/wp-content/uploads/2023/06/How-to-download-thumbnali-01.webp"></video>
+            </div>
+            <div class="our-games color_blue" style="margin-top: -20px;margin-bottom: 20px;">Money Game App – Steps to install</div>
+            <div class="our-games2" style="margin-left: -30px;padding-bottom: 30px;">
+                <div>
+                    <div class="our-games2">Steps to install the Zupee money game app and win money online are:
+                    <a style="text-decoration: none;color: #4611a7;" class="" data-bs-toggle="collapse" href="#multiCollapse" role="button" aria-expanded="false" aria-controls="multiCollapse">
+                    …more
+                    </a>
+                </div>
+                <div id="multiCollapse" class="collapse" style="margin-left: 100px;">
+                    <ol>
+                        <li> Click “Download App” to access online money games for Android or iOS.</li>
+                        <li>Tap “Ok” on the general warning message. Zupee is 100% secure and has been downloaded by over 1 crore players in India.</li>
+                        <li>Locate the app on your device (Check phone notifications/ Downloads folder), then install, sign up.</li>
+                        <li>Start playing your chosen money-winning games like Ludo, Trump Cards, Tambola, and many more.</li>
+                    </ol>
+                    <!-- <ul><li>First, decide which online real cash game you want to focus on. There are a lot of different games to choose from, but some are more likely to win you real money than others.</li>
+                        <li>Once you’ve decided on a game, do your research. Learn the game’s rules and determine the best ways to play.</li>
+                    </ul> -->
+                </div>
+
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="" style="margin-top: -30px;">
+            <div class="our-games color_blue">How to play online money games and win cash?</div>
+             <div class="our-games2 mt-2 " style="margin-left: -30px;">
+                <div class="long-text">
+                    <div class="our-games2">
+                        Start winning <a href="https://www.zupee.com/blog/how-to-earn-money-by-playing-games/" style="text-decoration: none;color: #4611a7;">real money by playing online&nbsp;games</a> Here are a few tips
+                        <a style="text-decoration: none;color: #4611a7;" class="" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+                            ...more
+                            </a>
+                        </div>
+                    
+                    <div id="multiCollapseExample1" class="collapse" style="margin-left: 100px;">
+                        <ul><li style="">First, decide which online real cash game you want to focus on. There are a lot of different games to choose from, but some are more likely to win you real money than others.</li><br>
+                            <li>Once you’ve decided on a game, do your research. Learn the game’s rules and determine the best ways to play.</li>
+                        </ul>
+                    </div>
+                </div>         
+            </div>
+             
+             <div class="our-games color_blue" style="margin-top: -10px;">ZUPEE IS A MEMBER OF</div>
+                <div class="row m justify-content-center">
+                    <div class="col-4 col-md-3 n" *ngFor="let obj of zupeeMemberData">
+                        <img class="memberImage" [src]="path + obj.image">
+                    </div>
+                </div>
+            </div>
+
+                
+
+                    <div class="" style="background:#daeee7;">
+                        <div class="our-games color_blue">online real cash games - faqs</div>
+                        <div class="questions">
+                        <div *ngFor="let obj of queansData" class="mt-4" >
+                        <h6 (click)="toggleAns(obj)" class="question">{{obj.question}}
+                            <span class="toggle">
+                                <span class="" style="float: right;" [class.opened]="obj.opened">▼</span>
+                            </span>
+                        </h6>
+                        <div class="answer" *ngIf="obj.opened">{{obj.answer}}</div>
+                        </div>
+                    </div>
+                  
+
+                    <div class="" style="background: #4611a7;border: 1px solid #e1e6f5;">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-6">
+                            <div class="footer_title">Zupee</div>
+                            <p>
+                                <a class="f-link" href="#">About Us</a><br>
+                                <a class="f-link" href="#">RNG Certification</a><br>
+                                <a class="f-link" href="#">AIGF Skill Certificate</a><br>
+                                <a class="f-link" href="#">Privacy Policy</a><br>
+                                <a class="f-link" href="#">Privacy Policy – Zupee Free</a><br>
+                                <a class="f-link" href="#">Terms & Conditions</a><br>
+                                <a class="f-link" href="#">Terms and Conditions – Zupee Free</a><br>
+                                <a class="f-link" href="#">Responsible Gaming</a><br>
+                                <a class="f-link" href="#">Blog</a><br>
+                                <a class="f-link" href="#">Careers</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6">
+                            <div>
+                                <div class="footer_title">Our Games</div>
+                                <p>
+                                    <a class="f-link" href="#">Ludo</a><br>
+                                    <a class="f-link" href="#">Snakes and ladders Plus</a><br>
+                                    <a class="f-link" href="#">Trump Cards Mania</a><br>
+                                    <a class="f-link" href="#">Zupee Cricket X Tambola</a><br>
+                                    <a class="f-link" href="#">Zupee Cricket Cards</a>
+                                </p>
+                            </div>
+                           
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6">
+                            <div class="footer_title">Popular Posts</div>
+                            <p>
+                                <a class="f-link" href="#">Download ludo online cash games (iOS | Android)</a><br>
+                                <a class="f-link" href="#">Best money earning apps in India</a><br>
+                                <a class="f-link" href="#">How to Win Ludo Money online</a><br>
+                                <a class="f-link" href="#">Ludo earning app to win cash</a><br>
+                                <a class="f-link" href="#">Play games to win money online</a>
+                            </p>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6">
+                            <div class="footer_title">Payment Partners</div>
+                            <p><img class="payment-icon lazyLoaded" src="/assets/images/razorpay.png"></p>
+                            <p><img class="payment-icon lazyLoaded" src="/assets/images/juspay.png"></p>
+                            <p><img class="payment-icon lazyLoaded" src="/assets/images/cashfree.png"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="footerCustom">
+                                <div class="col-md-12 col-sm-12 col-xs-12" style="">
+                                    <a href="#"><img class="footer-logo" [src]="path + footerCustomData.logoImage" ></a>
+                                </div>
+                                <div>
+                                    <ul>
+                                        <li><a href="https://www.facebook.com/zupeegames"><img class="linkImage" [src]="path + footerCustomData.facebook"></a></li>
+                                        <li><a href="https://www.facebook.com/zupee_official"><img class="linkImage" [src]="path + footerCustomData.instagram"></a></li>
+                                        <li><a href="https://www.facebook.com/c/zupeeofficial"><img class="linkImage" [src]="path + footerCustomData.youtube"></a></li>
+                                        <li><a href="mailto:care@zupee.com"><img class="linkImage" [src]="path + footerCustomData.messanger"></a></li>
+                                    </ul>
+                                </div>
+                                <p class="copyright-text">{{footerCustomData.lastText}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+</div>
