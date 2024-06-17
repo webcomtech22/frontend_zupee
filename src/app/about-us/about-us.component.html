@@ -7,7 +7,7 @@
             <div class="row whoWeAre" style="background-color: white;">
                 <div class="col-12 col-md-6 col1">
                     <h2 class="color_blue text-center fw-bold">{{whoWeAreData.heading}}</h2>
-                    <div class="fs-6 mt-4">
+                    <div class="fs-6 mt-4" style="margin-left: -10px;">
                         {{whoWeAreData.description}}
                     </div>
                 </div>
@@ -24,10 +24,10 @@
         <div class="row">
             <div class="col-md-6 col-12" style="">
                 <div style="display: flex; justify-content: center;align-items: center;flex-wrap: wrap;">
-                    <img style="margin: 10px;" class="" height= "170" width="200" [src]="path + gameChangeData.image1">
-                    <img style="margin: 10px;" class="" height="170" width="200" [src]="path + gameChangeData.image2">
-                    <img style="margin: 10px;" class="" height="170" width="200" [src]="path + gameChangeData.image3">
-                    <img style="margin: 10px;" class="" height="170" width="200" [src]="path + gameChangeData.image4">
+                    <img style="" class="gameGap" height= "170" width="200" [src]="path + gameChangeData.image1">
+                    <img style="" class="gameGap" height="170" width="200" [src]="path + gameChangeData.image2">
+                    <img style="" class="gameGap" height="170" width="200" [src]="path + gameChangeData.image3">
+                    <img style="" class="gameGap" height="170" width="200" [src]="path + gameChangeData.image4">
                 </div>
                 <!-- <div class="row g-3 gameChangeRow" style="">
                     <div class="col-md-6 col-12" style="">
@@ -80,7 +80,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-6" *ngFor="let obj of videoData">
                     <iframe class="elementor-video video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Saara India Khelega Zupee | Snakes and Ladders" width="640" height="360" [src]="sanitizeVideoUrl(obj.video)" id="widget2" data-gtm-yt-inspected-9="true"></iframe>
-                    <!-- <video width="640" height="360" [src]="sanitizeVideoUrl(obj.video)"></video> -->
+                    <!-- <video width="640" height="360" [src]="path + obj.video" controls></video> -->
                 </div>
             </div>
         </div>
@@ -96,8 +96,6 @@
                 <div class="col-12 col-md-6">
                     <iframe class="elementor-video video" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="10 Minute Mein Game Ho Jayega | Salman Khan X Zupee" width="640" height="360" src="https://www.youtube.com/embed/C7HITruJKNk?controls=1&amp;rel=0&amp;playsinline=0&amp;modestbranding=0&amp;autoplay=1&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fwww.zupee.com&amp;widgetid=5" id="widget6" data-gtm-yt-inspected-9="true"></iframe>                
                 </div> -->
-            
-
 
         <div>
             <div class="py-5">

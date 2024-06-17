@@ -79,4 +79,56 @@ export class DataService {
   getAbtInvestorsData(id:any){
     return this.http.get("http://localhost:3000/showAbtInvestors/"+id)
   }  
+
+//BLOG
+  getBlogInfoData(){
+    return this.http.get("http://localhost:3000/showBlogAllInfo")
+  }
+  getBlogAboutData(id:any){
+    return this.http.get("http://localhost:3000/showBlogAbout/"+id)
+  }  
+  getBlogPostsData(){
+    return this.http.get("http://localhost:3000/showBlogAllPosts")
+  }
+
+
+  //newsRoom
+  
+  getNewsBannerData(id:any){
+    return this.http.get("http://localhost:3000/showNewsBanner/"+id)
+  } 
+  getNewsInfoData(){
+    return this.http.get("http://localhost:3000/showNewsAllInfo")
+  }
+
+  //Ludo
+  getLudoBannerData(id:any){
+    return this.http.get("http://localhost:3000/showLudoBanner/"+id)
+  } 
+  getLudoGamesData(){
+    return this.http.get("http://localhost:3000/showLudoAllGames")
+  }
+  getLudoRatingData(id:any){
+    return this.http.get("http://localhost:3000/showLudoRating/"+id)
+  } 
+  
+  getLudoGameToPlayData(id:any){
+    return this.http.get("http://localhost:3000/showLudoGameToPlay/"+id)
+  } 
+  getLudoReviewsData(){
+    return this.http.get("http://localhost:3000/showLudoAllReviews")
+  }
+  getLudoStepsData(){
+    return this.http.get("http://localhost:3000/showLudoAllSteps")
+  }
+  getLudoQueAnsData(){
+    return this.http.get("http://localhost:3000/showLudoQueAns")
+  }
+
+  //contact us
+
+  insertContactsData(data:any){
+    return this.http.post("http://localhost:3000/addContact",data)
+  }
+
 }

@@ -1,8 +1,8 @@
 <div class="maindiv">
     <div class="row m" style="">
-        <div class="col-md-6 col-12" *ngFor="let obj of blogData">
+        <div class="col-md-6 col-12" *ngFor="let obj of blogInfoData">
             <div class="card" style="border: none;">
-                <img [src]="obj.image"  class="card-img-top blogImage">
+                <img [src]="path + obj.image"  class="card-img-top blogImage">
                 <div class="card-body">
                     <h3 class="card-title">{{obj.heading}}</h3>
                     <p class="card-text">{{obj.dateName}}</p>
@@ -16,17 +16,18 @@
         <div class="row mt-4 ms-md-5 ms-3">
             <div class="col-12 col-md-4">
                 <div style="color: white;"><span class="fs-4">About</span> 
-                    <p class="mt-3 fs-6">Play real money games like Ludo, Snakes and Ladders, Carrom and more with lakhs of players online. Show your skill, and win real money. Withdraw your winnings instantly using UPI or Bank Transfer.</p>
+                    <p class="mt-3 fs-6">{{blogAboutData.description}}</p>
                 </div>
             </div>
             <div class="col-12 col-md-4" style="">
                 <div style="color: white;"><span class="fs-4 ms-0 ms-md-4">Recent Posts</span>
-                    <ul class="mt-3 fs-6">
-                        <li>Skill Ludo games on Zupee | Strategies to Win Ludo</li>
+                    <ul class="mt-3 fs-6" *ngFor="let obj of blogRecentPost">
+                        <li>{{obj.post}}</li>
+                        <!-- <li>Skill Ludo games on Zupee | Strategies to Win Ludo</li>
                         <li>Best Free Online Games</li>
                         <li>Fast game </li>
                         <li>Unlocking Secure Online Ludo Gaming with Zupee</li>
-                        <li>Benefits of Playing Ludo and Why Zupee Takes It Up a Notch</li>
+                        <li>Benefits of Playing Ludo and Why Zupee Takes It Up a Notch</li> -->
                     </ul>
                 </div>
             </div>

@@ -8,9 +8,8 @@
     </div>
     <div style="position: relative;" class="d-md-flex d-none">
         <div style="position: absolute;margin: 50px 0 0 100px;" class="">
-            <h2 class="color_yellow mt-5 fw-bold">LUDO ONLINE ON ZUPEE</h2>
-            <p class="color_white">Play multiplayer Ludo with lakhs of players online.</p>
-            <p class="color_white"> Unleash your gaming skills to win real money.</p>
+            <h2 class="color_yellow mt-5 fw-bold">{{ludoBannerData.heading}}</h2>
+            <p class="color_white w-50">{{ludoBannerData.description}}</p>
 
             <div class="bg_yellow mt-5" style="border-radius: 30px;padding: 8px 20px;max-width: 350px;text-align: center;">
                 <img height="30" src="/assets/images/download-icon.gif">
@@ -24,10 +23,10 @@
                 <span class="color_white fw-bold" style="font-size: 14px;">₹10 Cr+ Daily cash winnings</span>
             </div>
         </div>
-        <img class="img-fluid " src="/assets/images/ludo_bannerImage.webp" width="">
+        <img class="img-fluid " [src]="path + ludoBannerData.bigImage" width="">
     </div>
     <div style="" class="d-md-none d-flex">
-        <img class="img-fluid" src="/assets/images/ludo_bannerImage2.webp" width="">
+        <img class="img-fluid" [src]="path + ludoBannerData.smallImage" width="">
     </div>
     
     <div>
@@ -62,26 +61,12 @@
 
             <div class="" >
                 <div class="row ourGamesDiv" style="" >
-                    <div class="col-6 col-md-3  mb-4" >
-                        <img class="ludo-supreme" src="/assets/images/ludo-supreme1.webp">
-                        <div style="margin-left: -112px;margin-top: 10px;"><div class="gameName">Ludo Supreme</div></div>
-                    </div>
-                    <div class="col-6 col-md-3  mb-4">
-                        <img class="ludo-supreme" src="/assets/images/ludo-supreme2.webp">
-                        <div style="margin-left: -112px;margin-top: 10px;"><div class="gameName">Ludo Ninja</div></div>
-                    </div>
-                    <div class="col-6 col-md-3  mb-4">
-                        <img class="ludo-supreme" src="/assets/images/ludo-supreme3.webp">
-                        <div style="margin-left: -112px;margin-top: 10px;"><div class="gameName">Ludo Turbo</div></div>
-                    </div>
-                    <div class="col-6 col-md-3  mb-4">
-                        <img class="ludo-supreme" src="/assets/images/ludo-supreme6.webp">
-                        <div style="margin-left: -112px;margin-top: 10px;"><div class="gameName">Ludo Supreme League
-                        </div></div>
+                    <div class="col-6 col-md-3  mb-4" *ngFor="let obj of ludoGamesData" >
+                        <img class="ludo-supreme" [src]="path + obj.image">
+                        <div style="margin-left: -112px;margin-top: 10px;"><div class="gameName">{{obj.name}}</div></div>
                     </div>
                 </div>
             </div>
-
         </div>
         
         <div>
@@ -109,12 +94,13 @@
     
 
         <div>
-            <h4 class="color_blue fw-bold text-center mt-4">LUDO ONLINE GAME REVIEW</h4>
-            <p class="text-center" style="font-size: 13px;">Play real money games in India on Zupee gaming app. Take a look at the reviews below:</p>
+            <h4 class="color_blue fw-bold text-center mt-4">{{ludoRatingData.heading}}</h4>
+            <p class="text-center" style="font-size: 13px;">{{ludoRatingData.description}}</p>
             <div class="text-center">
-                <img class="reviewImage"  src="/assets/images/reviewImage.png">
+                <img class="reviewImage"  [src]="path + ludoRatingData.image">
             </div>
         </div>
+
 
         <div class="" style=""> 
             <div id="carouselExampleControls" class="carousel slide mt-4 d-none d-md-flex">
@@ -204,7 +190,7 @@
                                 <div class="text-center" style="background:#edf0fa;">
                                     <P>{{obj.steps}}</P>
                                     <p>{{obj.heading}}</p>
-                                    <img class="" width="200" height="300" [src]="obj.image">
+                                    <img class="" width="200" height="300" [src]="path + obj.image">
                                 </div>
                             </div>
                         </div>
@@ -225,12 +211,12 @@
             <div id="carouselExampleControls4" class="carousel slide mt-4 d-md-none d-flex">
                 <div class="carousel-inner">
                    <div class="carousel-item" *ngFor="let ludo of getLudoGroups2(); let i = index"[class.active]="i===0">
-                            <div class="row" style="margin-left: 50px;">
+                            <div class="row" style="margin-right: 40px;">
                                 <div class="col" *ngFor="let obj of ludo">
                                     <div class="text-center" style="background:#edf0fa;">
                                         <P>{{obj.steps}}</P>
                                         <p>{{obj.heading}}</p>
-                                        <img class="" width="200" height="300" [src]="obj.image">
+                                        <img class="" width="200" height="300" [src]="path + obj.image">
                                     </div>
                                 </div>
                             </div> 
@@ -318,11 +304,11 @@
         <div>
             <div class="text-center mt-5">
                 <img height="90" src="/assets/images/ludo_small4.webp">
-                <h4 class="color_blue fw-bold text-center mt-4">WHICH LUDO GAME TO PLAY?</h4>
+                <h4 class="color_blue fw-bold text-center mt-4">{{ludoGameToPlayData.heading}}</h4>
             </div>
-            <p class="text" style="">With 4 formats of online Ludo games available on Zupee, which one should you play? Well, it depends on your preference and skill. We recommend you go through the rules of each format and play a few free games to see what suits you best!</p>
+            <p class="text" style="">{{ludoGameToPlayData.description}}</p>
             <div class="text-center mt-3">
-                <img class="ludo_different" src="/assets/images/ludo_different.webp">
+                <img class="ludo_different" [src]="path + ludoGameToPlayData.image">
             </div>
             <div>
                 <h4 class="color_blue fw-bold text-center mt-4">Ludo Without Dice</h4>
@@ -397,7 +383,7 @@
 
             <div class="queDiv" style="">
                 <div class="questions ">
-                <div *ngFor="let obj of questions" class="mt-4" >
+                <div *ngFor="let obj of ludoQueAnsData" class="mt-4" >
                 <h6 (click)="toggleAns(obj)" class="question" style="">{{obj.question}}
                     <span class="toggle">
                         <span class="" style="float: right;" [class.opened]="obj.opened">▼</span>

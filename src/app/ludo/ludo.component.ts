@@ -8,17 +8,30 @@ import { DataService } from '../data.service';
 })
 export class LUDOComponent implements OnInit{
   path:any = "http://localhost:3000/uploads/";
+  ludoBannerData:any;
+  ludoGamesData:any;
+  ludoRatingData:any;
+  ludoGameToPlayData:any;
+  ludoStepsData:any;
+  ludoQueAnsData:any;
   footerCustomData:any;
   id:any=1;
-  reviewsData:any;
+  ludoReviewsData:any;
 
 
   constructor(private dataService:DataService){}
 
 
   ngOnInit(): void {
-    this.getFooterCustom()
-    this.getReviews()
+    this.getLudoBanner();
+    this.getLudoGames();
+    this.getLudoRating();
+    this.getLudoGameToPlay();
+    this.getFooterCustom();
+    this.getLudoReviews();
+    this.getLudoSteps();
+    this.getQueAns();
+    
   }
   questions=[
     {question:"Where can I play money winning games?",answer:"There are several online games where you can win cash. One way is through the Zupee money winning app. It is a mobile gaming app that allows users to play various games for real cash like Ludo, Snakes & Ladders, Trump Cards, and Tambola.  So, what are you waiting for? Play & put your skills to the test by competing for real cash on Zupee money app.",opened:false},
@@ -35,15 +48,44 @@ export class LUDOComponent implements OnInit{
     console.log('New opened state:', question.opened);
      }
 
-     ludoStepsData=[
-      {steps:"STEP 1",heading:"CHOOSE ONLINE LUDO GAME FORMAT",image:"/assets/images/ludo_step1.webp"},
-      {steps:"STEP 2",heading:"START THE ONLINE GAME",image:"/assets/images/ludo_step2.webp"},
-      {steps:"STEP 3",heading:"CAPTURE TOKEN",image:"/assets/images/ludo_step3.webp"},
-      {steps:"STEP 4",heading:"EARN MAXIMUM POINTS",image:"/assets/images/ludo_step4.webp"},
-      {steps:"STEP 5",heading:"EARN EXTRA MOVES",image:"/assets/images/ludo_step5.webp"},
-      {steps:"STEP 6",heading:"WIN THE GAME",image:"/assets/images/ludo_step6.webp"}
-     ]
+    //  ludoStepsData=[
+    //   {steps:"STEP 1",heading:"CHOOSE ONLINE LUDO GAME FORMAT",image:"/assets/images/ludo_step1.webp"},
+    //   {steps:"STEP 2",heading:"START THE ONLINE GAME",image:"/assets/images/ludo_step2.webp"},
+    //   {steps:"STEP 3",heading:"CAPTURE TOKEN",image:"/assets/images/ludo_step3.webp"},
+    //   {steps:"STEP 4",heading:"EARN MAXIMUM POINTS",image:"/assets/images/ludo_step4.webp"},
+    //   {steps:"STEP 5",heading:"EARN EXTRA MOVES",image:"/assets/images/ludo_step5.webp"},
+    //   {steps:"STEP 6",heading:"WIN THE GAME",image:"/assets/images/ludo_step6.webp"}
+    //  ]
 
+     getLudoBanner(){
+      this.dataService.getLudoBannerData(this.id).subscribe(res=>{
+        this.ludoBannerData = res;
+      })
+     }
+
+     getLudoGames(){
+      this.dataService.getLudoGamesData().subscribe(res=>{
+        this.ludoGamesData = res;
+      })
+     }
+
+     getLudoRating(){
+      this.dataService.getLudoRatingData(this.id).subscribe(res=>{
+        this.ludoRatingData = res;
+      })
+     }
+
+     getLudoGameToPlay(){
+      this.dataService.getLudoGameToPlayData(this.id).subscribe(res=>{
+        this.ludoGameToPlayData = res;
+      })
+     }
+
+     getLudoSteps(){
+      this.dataService.getLudoStepsData().subscribe(res=>{
+        this.ludoStepsData = res;
+      })
+     }
      getLudoGroups(){
       const reviewGroups = [];
       for (let i = 0; i < this.ludoStepsData.length; i += 3){
@@ -67,26 +109,33 @@ export class LUDOComponent implements OnInit{
       })
      }
 
-     getReviews(){
-      this.dataService.getReviewsData().subscribe((res)=>{
-        this.reviewsData = res;
-        console.log(this.reviewsData)
+     getLudoReviews(){
+      this.dataService.getLudoReviewsData().subscribe((res)=>{
+        this.ludoReviewsData = res;
+        console.log(this.ludoReviewsData)
       })
      }
   
      getReviewGroups(){
       const reviewGroups = [];
-      for (let i = 0; i < this.reviewsData.length; i += 3){
-        reviewGroups.push(this.reviewsData.slice(i, i + 3));
+      for (let i = 0; i < this.ludoReviewsData.length; i += 3){
+        reviewGroups.push(this.ludoReviewsData.slice(i, i + 3));
       }
       return reviewGroups
     }
   
     getReviewGroups2(){
       const reviewGroups = [];
-      for (let i = 0; i < this.reviewsData.length; i += 1){
-        reviewGroups.push(this.reviewsData.slice(i, i + 1));
+      for (let i = 0; i < this.ludoReviewsData.length; i += 1){
+        reviewGroups.push(this.ludoReviewsData.slice(i, i + 1));
       }
       return reviewGroups
+    }
+
+    getQueAns(){
+      this.dataService.getLudoQueAnsData().subscribe((res)=>{
+        this.ludoQueAnsData = res;
+        console.log(this.ludoQueAnsData)
+      })
     }
 }

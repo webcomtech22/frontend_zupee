@@ -1,36 +1,24 @@
 <div class="maindiv">
     <div class="mt-4">
-        <img class="img-fluid" src="/assets/images/news_bannerImage.png">
+        <img class="img-fluid" [src]="path + newsBannerData.image">
     </div>
 
-    <div class="d-md-flex d-block" style="overflow-x: hidden;padding: 0 20px;">
+    <div class="d-md-flex d-block" style="">
         <div class="d-flex all" style="">
-            <button class="btn ms-2" style="background:#ffe800;padding:7px 40px;">ALL</button>
-            <button class="btn ms-2" style="border: 1px solid #4611a7;">ZUPEE IN NEWS</button>
-            <button class="btn ms-2" style="border: 1px solid #4611a7;">PRESS RELEASE</button>
+            <button class="btn ms-2" style="background:#ffe800;padding:7px 40px;" (click)="showAllData()">ALL</button>
+            <button class="btn ms-2" style="border: 1px solid #4611a7;" (click)="showZupeeNews()">ZUPEE IN NEWS</button>
+            <button class="btn ms-2" style="border: 1px solid #4611a7;" (click)="showPressRelease()">PRESS RELEASE</button>
         </div>
         
         <div style="" class="d-flex all2">
             <div class="dropdown show">
-                <a style="border: 1px solid rgb(202, 198, 198);" class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Dropdown link
-                </a>
-              
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="#">Action</a>
-                  <a class="dropdown-item" href="#">Another action</a>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </div>
-            
-            <!-- <div class="dropdown show">
-                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a style="background: white;color: black;margin-left: 10px;" class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                  Content-Type
                 </a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a> -->
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="overflow-y: auto;max-height: 150px;">
+                    <a class="dropdown-item" href="#">Action</a>
 
-                <!-- <option>Announcement</option>
+                <option>Announcement</option>
                 <option selected>Ashwani Rana</option>
                 <option>Brand Ambassador</option>
                 <option>COO</option>
@@ -48,9 +36,9 @@
                 <option>National Technology Day</option>
                 <option>Period Leave</option>
                 <option>Period Leave Policy</option>
-                <option>Reliance Jio</option> -->
-            <!-- </div>
-            </div> -->
+                <option>Reliance Jio</option> 
+             </div>
+            </div>
             <div style="display: flex;">
                 <input type="search" class="form-control search-input ms-2 w-50" placeholder="Search">
             <!-- <span class="input-group-text"><i class="fas fa-search"></i> </span> -->
@@ -63,10 +51,10 @@
     
 
     <div>
-        <div class="row newsData" style="" >
-            <div class="col-md-4 col-12 mt-3" style=""  *ngFor="let obj of newsData">
-                <div class="card" style="border: none;">
-                    <img [src]="obj.image" class="card-img-top newsImage" style="">
+        <div class="row newsData" style="">
+            <div class="col-md-4 col-12 mt-3" style="" *ngFor="let obj of filteredNewsData">
+                <div class="card" style="border: none;" >
+                    <img [src]="path + obj.image" class="card-img-top newsImage" style="">
                     <div class="card-body">
                         <h6 class="card-title color_blue">{{obj.heading}}</h6>
                         <div><span style="font-size: 12px;">{{obj.date}}</span><span style="font-size: 12px;margin-left: 10px">{{obj.news}}</span><span style="font-size: 12px;margin-left: 10px" class="post">{{obj.post}}</span></div>

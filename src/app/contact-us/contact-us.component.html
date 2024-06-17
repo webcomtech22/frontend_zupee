@@ -5,25 +5,25 @@
           <div>
             <h3 class="color_blue fw-bold contactHeading" style="">CONTACT US</h3>
           </div>
-          <form class="m">
+          <form (ngSubmit)="addContact()" class="m">
               <div class="form-group">
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name*">
+                <input type="text" class="form-control" name="name" id="exampleFormControlInput1" [(ngModel)]="contactsData.name" placeholder="Name*">
               </div>
               <div class="form-group">
-                  <input type="text" class="form-control mt-3"  id="exampleFormControlInput1" placeholder="Phone Number*">
+                  <input type="text" class="form-control mt-3" name="phoneNo"  id="exampleFormControlInput1" [(ngModel)]="contactsData.phoneNo" placeholder="Phone Number*">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control mt-3" id="exampleFormControlInput1" placeholder="Email">
+                  <input type="text" class="form-control mt-3" name="email" id="exampleFormControlInput1" [(ngModel)]="contactsData.email" placeholder="Email">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control mt-3"  id="exampleFormControlInput1" placeholder="Enter Subject">
+                  <input type="text" class="form-control mt-3" name="subject" id="exampleFormControlInput1" [(ngModel)]="contactsData.subject" placeholder="Enter Subject">
                 </div>
               
               <div class="form-group">
-                <textarea class="form-control mt-3" id="exampleFormControlTextarea1" rows="3" placeholder="Write your query (minimum 20 characters*)"></textarea>
+                <textarea class="form-control mt-3" id="exampleFormControlTextarea1" name="query" rows="3" [(ngModel)]="contactsData.query" placeholder="Write your query (minimum 20 characters*)"></textarea>
               </div>
               <div>
-                <button class="color_blue fw-bold my-4 ms-4" style="background: #ffe800;padding: 10px 20px;border-radius: 20px;border: none;">Send Your Query!</button>
+                <button type="submit" class="color_blue fw-bold my-4 ms-4" style="background: #ffe800;padding: 10px 20px;border-radius: 20px;border: none;">Send Your Query!</button>
               </div>
             </form>
           </div> 
